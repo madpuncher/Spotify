@@ -29,6 +29,7 @@
 		0257357926CCEEA1006E3E6E /* AudioTrack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0257357826CCEEA1006E3E6E /* AudioTrack.swift */; };
 		0257357B26CCEEAD006E3E6E /* Artist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0257357A26CCEEAD006E3E6E /* Artist.swift */; };
 		0257357D26CCEEB9006E3E6E /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0257357C26CCEEB9006E3E6E /* UserProfile.swift */; };
+		02B789B826D27638003C2A39 /* AuthResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B789B726D27638003C2A39 /* AuthResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +57,7 @@
 		0257357826CCEEA1006E3E6E /* AudioTrack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioTrack.swift; sourceTree = "<group>"; };
 		0257357A26CCEEAD006E3E6E /* Artist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Artist.swift; sourceTree = "<group>"; };
 		0257357C26CCEEB9006E3E6E /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
+		02B789B726D27638003C2A39 /* AuthResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +118,7 @@
 				0257357826CCEEA1006E3E6E /* AudioTrack.swift */,
 				0257357A26CCEEAD006E3E6E /* Artist.swift */,
 				0257357C26CCEEB9006E3E6E /* UserProfile.swift */,
+				02B789B726D27638003C2A39 /* AuthResponse.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -252,6 +255,7 @@
 				0257357726CCEE97006E3E6E /* Playlist.swift in Sources */,
 				0257357126CCEDC5006E3E6E /* AuthManager.swift in Sources */,
 				0257356E26CCED49006E3E6E /* SearchResultsViewController.swift in Sources */,
+				02B789B826D27638003C2A39 /* AuthResponse.swift in Sources */,
 				0257355A26CCEC26006E3E6E /* TabBarViewController.swift in Sources */,
 				0257356826CCECF8006E3E6E /* ProfileViewController.swift in Sources */,
 				0257354526CCEAB1006E3E6E /* HomeViewController.swift in Sources */,
