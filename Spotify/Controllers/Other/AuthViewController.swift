@@ -32,6 +32,7 @@ class AuthViewController: UIViewController, WKNavigationDelegate {
         guard let url = AuthManager.shared.signInURL else { return }
         
         webView.load(URLRequest(url: url))
+        
     }
     
     override func viewDidLayoutSubviews() {

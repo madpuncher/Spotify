@@ -28,7 +28,7 @@ class ProfileViewController: UIViewController {
         tableView.dataSource = self
         view.addSubview(tableView)
         fetchProfile()
-
+        
     }
     
     override func viewDidLayoutSubviews() {

@@ -20,6 +20,7 @@ class HomeViewController: UIViewController {
             style: .done,
             target: self,
             action: #selector(didTapSetting))
+        
     }
 
     @objc private func didTapSetting() {

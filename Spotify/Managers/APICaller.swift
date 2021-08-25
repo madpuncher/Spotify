@@ -1,4 +1,4 @@
-//
+    //
 //  APICaller.swift
 //  Spotify
 //
@@ -23,10 +23,11 @@ class APICaller {
     
     func getCurrentUserProfile(completion: @escaping (Result<UserProfile, Error>) -> Void) {
         createRequest(with: URL(string: Constants.baseAPIURL + "/me"), type: .GET) { request in
-            URLSession.shared.dataTask(with: request) { data, _, error in
+           let task = URLSession.shared.dataTask(with: request) { data, _, error in
                 guard let data = data, error == nil else {
                     completion(.failure(APIError.failedToGetData))
                     return
+
                 }
                 do {
                     let result = try JSONDecoder().decode(UserProfile.self, from: data) 
@@ -35,7 +36,7 @@ class APICaller {
                     completion(.failure(error))
                 }
             }
-            .resume()
+            task.resume()
         }
     }
     
