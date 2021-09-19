@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -160,8 +160,8 @@
 		0257355F26CCEC77006E3E6E /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				0257354426CCEAB1006E3E6E /* HomeViewController.swift */,
 				0257355926CCEC26006E3E6E /* TabBarViewController.swift */,
+				0257354426CCEAB1006E3E6E /* HomeViewController.swift */,
 				0257355B26CCEC68006E3E6E /* SearchViewController.swift */,
 				0257355D26CCEC70006E3E6E /* LibraryViewController.swift */,
 			);
@@ -198,7 +198,6 @@
 				B6B6F516E72B1A160CC0F587 /* Pods-Spotify.debug.xcconfig */,
 				32AA172AF48BE1EDE1B0B909 /* Pods-Spotify.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};

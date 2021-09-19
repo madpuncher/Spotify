@@ -18,7 +18,15 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window = UIWindow(frame: windowsScene.coordinateSpace.bounds)
         window?.windowScene = windowsScene
         
-        window?.rootViewController = AuthViewController()
+        // Check, if user signedIn - we open main view controller, else login view controller
+        if AuthManager.shared.isSignedIn {
+            
+            window?.rootViewController = TabBarViewController()
+            
+        } else {
+            
+            window?.rootViewController = UINavigationController(rootViewController: WelcomeViewController())
+        }
 
         window?.makeKeyAndVisible()
     }
