@@ -12,28 +12,6 @@ class TabBarViewController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let vc1 = HomeViewController()
-        let vc2 = SearchViewController()
-        let vc3 = LibraryViewController()
-        
-        vc1.title = "Browse"
-        vc2.title = "Search"
-        vc3.title = "Library"
-                
-        let homeNavigationVC = UINavigationController(rootViewController: vc1)
-        let searchNavigationVC = UINavigationController(rootViewController: vc2)
-        let libraryNavigationVC = UINavigationController(rootViewController: vc3)
-        
-        homeNavigationVC.tabBarItem = UITabBarItem(title: "Home", image: UIImage(systemName: "house"), tag: 1)
-        searchNavigationVC.tabBarItem = UITabBarItem(title: "Search", image: UIImage(systemName: "magnifyingglass"), tag: 2)
-        libraryNavigationVC.tabBarItem = UITabBarItem(title: "Home", image: UIImage(systemName: "music.note.list"), tag: 3)
-        
-        homeNavigationVC.navigationBar.prefersLargeTitles = true
-        searchNavigationVC.navigationBar.prefersLargeTitles = true
-        libraryNavigationVC.navigationBar.prefersLargeTitles = true
-        
-        viewControllers = [homeNavigationVC, searchNavigationVC, libraryNavigationVC]
-
     }
 }
 
