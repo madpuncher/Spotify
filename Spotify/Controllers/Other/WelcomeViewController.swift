@@ -47,7 +47,16 @@ class WelcomeViewController: UIViewController {
     }
     
     private func handleSignIn(success: Bool) {
-        // Login user if success auth 
+        // Login user if success auth
+        guard success else {
+            showAlert(header: "Authorization error", message: "Please, try again! Maybe you have some troubles with network")
+            return
+        }
+        
+        let mainAppTabBarVC = TabBarViewController()
+        mainAppTabBarVC.modalPresentationStyle = .fullScreen
+        present(mainAppTabBarVC, animated: true)
+        
     }
     
     private func setupConstraints() {
@@ -61,6 +70,14 @@ class WelcomeViewController: UIViewController {
         ])
     }
     
+    private func showAlert(header: String, message: String) {
+        let alert = UIAlertController(title: header, message: message, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default)
+        
+        alert.addAction(okAction)
+        
+        present(alert, animated: true)
+    }
 }
 
 //MARK: Setup Canvas
