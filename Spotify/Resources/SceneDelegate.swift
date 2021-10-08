@@ -21,6 +21,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Check, if user signedIn - we open main view controller, else login view controller
         if AuthManager.shared.isSignedIn {
             
+            AuthManager.shared.refreshTokenIfNeeded(completion: nil)
             window?.rootViewController = TabBarViewController()
             
         } else {
