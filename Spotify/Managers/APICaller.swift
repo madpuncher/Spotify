@@ -23,20 +23,15 @@ final class APICaller {
     
     public func getCurrentUserProfile(completion: @escaping (Result<UserProfile, Error>) -> Void) {
         
-        createRequest(with: URL(string: Constants.baseURL + "/me"), type: .GET) { request in
+        createRequest(with: URL(string: Constants.baseURL + "/me"), type: .GET) { [weak self] request in
             
-            URLSession.shared.dataTask(with: request) { data, _, error in
+            URLSession.shared.dataTask(with: request) { data, response, error in
               
-                guard
-                    let data = data,
-                    error == nil else {
-                        completion(.failure(APIError.failedToGetData))
-                        return
-                    }
+                guard let dataAfterHandle = self?.networkingHandler(data: data, response: response, error: error) else { return }
                 
                 do {
                     
-                    let result = try JSONDecoder().decode(UserProfile.self, from: data)
+                    let result = try JSONDecoder().decode(UserProfile.self, from: dataAfterHandle)
                     completion(.success(result))
                     
                 } catch let error {
@@ -45,6 +40,16 @@ final class APICaller {
             }
             .resume()
         }
+    }
+    
+    private func networkingHandler(data: Data?, response: URLResponse?, error: Error? ) -> Data? {
+        guard
+            let data = data,
+            error == nil,
+            let response = response as? HTTPURLResponse,
+            response.statusCode >= 200 && response.statusCode < 300 else { return nil }
+        
+        return data
     }
     
     public func getNewReleases(completion: @escaping (Result<NewReleases, Error>) -> Void) {
@@ -58,7 +63,6 @@ final class APICaller {
                 do {
                     let result = try JSONDecoder().decode(NewReleases.self, from: data)
                     completion(.success(result))
-                    print(result)
                 } catch let error {
                     completion(.failure(error))
                 }
@@ -68,7 +72,7 @@ final class APICaller {
     }
     
     public func getFeaturedPlaylist(completion: @escaping (Result<FeaturedPlaylists, Error>) -> Void) {
-        createRequest(with: URL(string: Constants.baseURL + "/browse/featured_playlists?limit=2"), type: .GET) { request in
+        createRequest(with: URL(string: Constants.baseURL + "/browse/featured-playlists"), type: .GET) { request in
             URLSession.shared.dataTask(with: request) { data, _, error in
                 guard let data = data, error == nil else {
                     completion(.failure(APIError.failedToGetData))

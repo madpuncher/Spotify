@@ -19,6 +19,7 @@ struct AlbumResponse: Codable {
 
 struct Album: Codable {
     
+    let name: String
     let album_type: String
     let available_markets: [String]
     let id: String
