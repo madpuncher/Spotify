@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0250BD442712D74700511ED3 /* NewReleasesCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0250BD432712D74700511ED3 /* NewReleasesCellViewModel.swift */; };
 		0257354126CCEAB1006E3E6E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0257354026CCEAB1006E3E6E /* AppDelegate.swift */; };
 		0257354326CCEAB1006E3E6E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0257354226CCEAB1006E3E6E /* SceneDelegate.swift */; };
 		0257354526CCEAB1006E3E6E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0257354426CCEAB1006E3E6E /* HomeViewController.swift */; };
@@ -45,6 +46,7 @@
 
 /* Begin PBXFileReference section */
 		00A7B953FD69B67B8204BF1D /* Pods_Spotify.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Spotify.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0250BD432712D74700511ED3 /* NewReleasesCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewReleasesCellViewModel.swift; sourceTree = "<group>"; };
 		0257353D26CCEAB1006E3E6E /* Spotify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Spotify.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0257354026CCEAB1006E3E6E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0257354226CCEAB1006E3E6E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -160,6 +162,7 @@
 		0257355626CCEAD3006E3E6E /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				0250BD432712D74700511ED3 /* NewReleasesCellViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -360,6 +363,7 @@
 				028EFF4326F8937A0078CB86 /* Extensions.swift in Sources */,
 				0281BF9F2711C13900A68E05 /* RecommendedCollectionViewCell.swift in Sources */,
 				0257355C26CCEC68006E3E6E /* SearchViewController.swift in Sources */,
+				0250BD442712D74700511ED3 /* NewReleasesCellViewModel.swift in Sources */,
 				0281BF9D2711C12900A68E05 /* FeaturedCollectionViewCell.swift in Sources */,
 				0281BF90271184D200A68E05 /* NewReleases.swift in Sources */,
 				0257357726CCEE97006E3E6E /* Playlist.swift in Sources */,
